@@ -21,6 +21,10 @@ public class CavalryUnit extends Unit{
     static int attack = 20;
     static int armor = 12;
 
+
+    //changes when getBonusAttack is called
+    private boolean charged = false;
+
     /**
      * constructor to assigne values when creation
      * @param name type string
@@ -37,7 +41,9 @@ public class CavalryUnit extends Unit{
      */
     @Override
     public int getAttackBonus() {
-        return attackBonus;
+        int temp_attack = charged ? attackBonus - 2 : attackBonus;
+        charged = true;
+        return temp_attack;
     }
 
     /**
