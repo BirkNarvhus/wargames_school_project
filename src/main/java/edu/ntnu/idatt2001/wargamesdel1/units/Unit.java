@@ -1,4 +1,6 @@
-package wargamesdel1.units;
+package edu.ntnu.idatt2001.wargamesdel1.units;
+
+import edu.ntnu.idatt2001.wargamesdel1.army.Army;
 
 import java.util.Objects;
 
@@ -109,7 +111,7 @@ public abstract class Unit {
     /**
      * checks if two objcts equal
      * used in .contais, and used when removing object from arraylsit in army class
-     * @see wargamesdel1.army.Army
+     * @see Army
      * @param o object to check
      * @return if object is equal to check object
      */

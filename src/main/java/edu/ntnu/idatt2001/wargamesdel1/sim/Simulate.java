@@ -1,7 +1,4 @@
-package wargamesdel1.sim;
-
-import wargamesdel1.army.Army;
-import wargamesdel1.units.ComanderUnit;
+package edu.ntnu.idatt2001.wargamesdel1.sim;
 
 /**
  * runs the game/simulation

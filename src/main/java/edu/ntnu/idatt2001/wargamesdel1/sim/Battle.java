@@ -1,7 +1,7 @@
-package wargamesdel1.sim;
+package edu.ntnu.idatt2001.wargamesdel1.sim;
 
-import wargamesdel1.army.Army;
-import wargamesdel1.units.Unit;
+import edu.ntnu.idatt2001.wargamesdel1.units.Unit;
+import edu.ntnu.idatt2001.wargamesdel1.army.Army;
 
 /**
  * Battle class used to sim a battle

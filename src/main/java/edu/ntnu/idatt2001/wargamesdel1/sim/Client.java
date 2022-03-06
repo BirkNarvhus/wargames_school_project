@@ -1,7 +1,7 @@
-package wargamesdel1.sim;
+package edu.ntnu.idatt2001.wargamesdel1.sim;
 
-import wargamesdel1.army.Army;
-import wargamesdel1.units.*;
+import edu.ntnu.idatt2001.wargamesdel1.army.Army;
+import edu.ntnu.idatt2001.wargamesdel1.units.*;
 
 public class Client {
     private final Army army1;

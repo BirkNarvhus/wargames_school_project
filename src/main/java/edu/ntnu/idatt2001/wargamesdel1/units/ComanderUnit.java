@@ -1,4 +1,4 @@
-package wargamesdel1.units;
+package edu.ntnu.idatt2001.wargamesdel1.units;
 
 /**
  * Comander unit subclass of CavalryUnit

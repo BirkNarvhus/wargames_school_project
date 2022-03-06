@@ -1,6 +1,6 @@
-package wargamesdel1.army;
+package edu.ntnu.idatt2001.wargamesdel1.army;
 
-import wargamesdel1.units.*;
+import edu.ntnu.idatt2001.wargamesdel1.units.*;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
