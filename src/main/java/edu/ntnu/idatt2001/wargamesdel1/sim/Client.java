@@ -22,8 +22,6 @@ public class Client {
 
     /**
      * creates armies on construction of Class
-     * @param army1 army 1
-     * @param army2 army 2
      */
     public Client() {
         this.army1 = new Army("humans");

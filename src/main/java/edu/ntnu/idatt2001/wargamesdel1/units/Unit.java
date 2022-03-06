@@ -63,7 +63,7 @@ public abstract class Unit {
      */
     public void setHealth(int health){
         this.health = health;
-    };
+    }
 
 
     /**
