@@ -5,13 +5,13 @@ package wargamesdel1.units;
  * exp: cavalery and ranged
  *
  * @author birk
- * @version 1.01 22.02.2022
+ * @version 1.01 06.03.2022
  */
 public abstract class Unit {
-    private String name;
+    final private String name;
     private int health;
-    private int attack;
-    private int armor;
+    final private int attack;
+    final private int armor;
 
     /**
      * konstructer for assaigning values when super() is used
@@ -29,6 +29,17 @@ public abstract class Unit {
         this.health = health;
         this.attack = attack;
         this.armor = armor;
+    }
+
+    /**
+     * overload constructer for deep copying another unit
+     * @param unit unit to clone
+     */
+    public Unit(Unit unit){
+        this.name = unit.getName();
+        this.health = unit.getHealth();
+        this.attack = unit.getAttack();
+        this.armor = unit.getArmor();
     }
 
     /**
@@ -99,7 +110,7 @@ public abstract class Unit {
      */
     @Override
     public String toString() {
-        return "Unit{" +
+        return this.getClass() + "{" +
                 "name='" + name + '\'' +
                 ", health=" + health +
                 ", attack=" + attack +

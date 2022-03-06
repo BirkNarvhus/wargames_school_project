@@ -30,6 +30,14 @@ public class InfantryUnit extends Unit{
     }
 
     /**
+     * overload constructer for deep copying another unit
+     * @param unit unit to clone
+     */
+    public InfantryUnit(Unit unit){
+        super(unit);
+    }
+
+    /**
      * retunrs the default attack bonus
      * @return attack bonus type int
      */

@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @see Unit
  *
  * @author birk
- * @version 1.02 06.03.2022
+ * @version 1.01 06.03.2022
  */
 public class CavalryUnit extends Unit{
 
@@ -47,6 +47,14 @@ public class CavalryUnit extends Unit{
      */
     protected CavalryUnit(String name, int health, int attack, int armor) throws IllegalArgumentException {
         super(name, health, attack, armor);
+    }
+
+    /**
+     * overload constructer for deep copying another unit
+     * @param unit unit to clone
+     */
+    public CavalryUnit(Unit unit){
+        super(unit);
     }
 
     /**

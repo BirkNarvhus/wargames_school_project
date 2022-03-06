@@ -6,7 +6,7 @@ package wargamesdel1.units;
  * @see Unit
  *
  * @author birk
- * @version 1.02 06.03.2022
+ * @version 1.01 06.03.2022
  */
 public class ComanderUnit extends CavalryUnit{
     static int attack = 25;
@@ -22,5 +22,13 @@ public class ComanderUnit extends CavalryUnit{
      */
     public ComanderUnit(String name, int health) throws IllegalArgumentException {
         super(name, health, attack, armor);
+    }
+
+    /**
+     * overload constructer for deep copying another unit
+     * @param unit unit to clone
+     */
+    public ComanderUnit(Unit unit){
+        super(unit);
     }
 }
