@@ -3,6 +3,13 @@ package edu.ntnu.idatt2001.wargamesdel1.sim;
 import edu.ntnu.idatt2001.wargamesdel1.army.Army;
 import edu.ntnu.idatt2001.wargamesdel1.units.*;
 
+/**
+ * future client
+ * now its used to hardcode a test case
+ *
+ * @author birk
+ * @version 1.01 06.03.2022
+ */
 public class Client {
     private final Army army1;
     private final Army army2;
@@ -28,7 +35,16 @@ public class Client {
         this.army2 = new Army("not humans");
     }
 
-    private Army createArmy(Army army, int numInf, int numCav, int numRange, int numCom){
+    /**
+     * loops the different unit types and addes them to army.
+     * it also indexes the units (probobly better to do this in the army object)
+     * @param army army to add units
+     * @param numInf number of infantryUnits
+     * @param numCav number of cavUnits
+     * @param numRange number of rangedUnits
+     * @param numCom number of comanderUnits
+     */
+    private void createArmy(Army army, int numInf, int numCav, int numRange, int numCom){
 
         for (int i = 0; i < numInf; i++) {
             army.addUnit(new InfantryUnit(nameInf + i, hpInf));
@@ -43,7 +59,6 @@ public class Client {
             army.addUnit(new ComanderUnit(nameCom + i, hpCom));
         }
 
-        return army;
     }
 
 

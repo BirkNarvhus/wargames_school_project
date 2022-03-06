@@ -2,6 +2,8 @@ package edu.ntnu.idatt2001.wargamesdel1.sim;
 
 /**
  * runs the game/simulation
+ * @author birk
+ *  @version 1.01 06.03.2022
  */
 public class Simulate {
     /**
