@@ -11,6 +11,8 @@ public class Simulate {
         Army army = new Army("test2");
         army.addUnit(c);
 
-        System.out.println(army.stringAll());
+        System.out.println(army);
+
+        army.remove(c);
     }
 }

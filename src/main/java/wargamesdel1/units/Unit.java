@@ -1,5 +1,7 @@
 package wargamesdel1.units;
 
+import java.util.Objects;
+
 /**
  * abstact class for super too different sub classes
  * exp: cavalery and ranged
@@ -102,6 +104,30 @@ public abstract class Unit {
      */
     public int getArmor() {
         return armor;
+    }
+
+    /**
+     * checks if two objcts equal
+     * used in .contais, and used when removing object from arraylsit in army class
+     * @see wargamesdel1.army.Army
+     * @param o object to check
+     * @return if object is equal to check object
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Unit)) return false;
+        Unit unit = (Unit) o;
+        return getHealth() == unit.getHealth() && getAttack() == unit.getAttack() && getArmor() == unit.getArmor() && getName().equals(unit.getName()) && unit.getClass() == getClass();
+    }
+
+    /**
+     * overide to ensure equals and hashcode gives same otucome
+     * @return hascode
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getHealth(), getAttack(), getArmor(), getClass());
     }
 
     /**
