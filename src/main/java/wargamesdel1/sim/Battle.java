@@ -33,8 +33,11 @@ public class Battle {
         Unit unit1 = army1.getRandomUnit();
         Unit unit2 = army2.getRandomUnit();
 
+        int counter = 0;
+
         while (unit1 != null && unit2 != null) {
 
+            counter++;
             unit1.attack(unit2);
             unit2.attack(unit1);
 
@@ -42,13 +45,14 @@ public class Battle {
                 army1.remove(unit1);
 
             if (unit2.getHealth() <= 0)
-                army2.remove(unit1);
+                army2.remove(unit2);
 
             unit1 = army1.getRandomUnit();
             unit2 = army2.getRandomUnit();
         }
 
-        return (unit1 != null) ? army2 : army1;
+        System.out.println("counter is: " + counter);
+        return (unit1 == null) ? army2 : army1;
     }
 
     /**

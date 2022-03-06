@@ -135,11 +135,11 @@ public abstract class Unit {
      */
     @Override
     public String toString() {
-        return this.getClass() + "{" +
+        return "[" +
                 "name='" + name + '\'' +
                 ", health=" + health +
                 ", attack=" + attack +
                 ", armor=" + armor +
-                '}';
+                ']';
     }
 }
