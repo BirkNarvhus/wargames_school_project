@@ -1,9 +1,6 @@
 package wargamesdel1.army;
 
-import wargamesdel1.units.CavalryUnit;
-import wargamesdel1.units.ComanderUnit;
-import wargamesdel1.units.InfantryUnit;
-import wargamesdel1.units.Unit;
+import wargamesdel1.units.*;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -16,10 +13,10 @@ import java.util.stream.Collectors;
  */
 public class Army {
     //name of army
-    final private String name;
+    private final String name;
 
     //units in army
-    final private ArrayList<Unit> units;
+    private final ArrayList<Unit> units;
 
     /**
      * assignes name, and creates units list
@@ -62,6 +59,9 @@ public class Army {
         else
         if (unit.getClass() == InfantryUnit.class)
             units.add(new InfantryUnit(unit));
+        else
+        if (unit.getClass() == RangedUnit.class)
+            units.add(new RangedUnit(unit));
         else
             throw new IllegalArgumentException("Unit class not handeld in army");
     }

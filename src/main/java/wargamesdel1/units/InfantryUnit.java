@@ -14,10 +14,10 @@ public class InfantryUnit extends Unit{
     // local static default variabels
     // for easy change, but they shoud not be changed when game is running
     // static so they can be used before super class constructer
-    static int attackBonus = 2;
-    static int resistBonus = 1;
-    static int attack = 15;
-    static int armor = 10;
+    private final static int attackBonus = 2;
+    private final static int resistBonus = 1;
+    private final static int attack = 15;
+    private final static int armor = 10;
 
     /**
      * constructor to assigne values when creation

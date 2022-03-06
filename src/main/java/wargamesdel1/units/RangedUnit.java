@@ -1,28 +1,27 @@
 package wargamesdel1.units;
 
-
 /**
- * Cavalry unit
- * gets bonus in attack, and small bonus in resistance
+ * RangedUnit
+ * gets bonus in attack cous it can attack from rang
  * subclass to Units super class
  * @see Unit
  *
  * @author birk
  * @version 1.01 06.03.2022
  */
-public class CavalryUnit extends Unit{
+public class RangedUnit extends Unit{
 
     // local static default variabels
     // for easy change, but they shoud not be changed when game is running
     // static so they can be used before super class constructer
-    static int attackBonus = 4;
-    static int resistBonus = 1;
-    static int attack = 20;
-    static int armor = 12;
+    private final static int attackBonus = 3;
+    private final static int resistBonus = 2;
+    private final static int attack = 15;
+    private final static int armor = 8;
 
 
-    //changes when getBonusAttack is called
-    private boolean charged = false;
+    //changes when get bonus resist is calle
+    private int bonusResistCounter = 2;
 
     /**
      * constructor to assigne values when creation
@@ -30,7 +29,7 @@ public class CavalryUnit extends Unit{
      * @param health type
      * @throws IllegalArgumentException if name is empty or health is less then or equals 0
      */
-    public CavalryUnit(String name, int health) throws IllegalArgumentException {
+    public RangedUnit(String name, int health) throws IllegalArgumentException {
         super(name, health, attack, armor);
     }
 
@@ -44,7 +43,7 @@ public class CavalryUnit extends Unit{
      * @param armor type int
      * @throws IllegalArgumentException if name is empty or health is less then or equals 0
      */
-    protected CavalryUnit(String name, int health, int attack, int armor) throws IllegalArgumentException {
+    protected RangedUnit(String name, int health, int attack, int armor) throws IllegalArgumentException {
         super(name, health, attack, armor);
     }
 
@@ -52,7 +51,7 @@ public class CavalryUnit extends Unit{
      * overload constructer for deep copying another unit
      * @param unit unit to clone
      */
-    public CavalryUnit(Unit unit){
+    public RangedUnit(Unit unit){
         super(unit);
     }
 
@@ -62,17 +61,22 @@ public class CavalryUnit extends Unit{
      */
     @Override
     public int getAttackBonus() {
-        int temp_attack = charged ? attackBonus - 2 : attackBonus;
-        charged = true;
-        return temp_attack;
+        return attackBonus;
     }
 
     /**
      * retunrs the default resist bonus
+     * it gets a bonus thed first 2 times the memthod is called
+     * from bonus resist counter
      * @return resist bonus type int
      */
     @Override
     public int getResistBonus() {
+        if (bonusResistCounter > 0) {
+            int temp_resist = resistBonus + bonusResistCounter * 2;
+            bonusResistCounter -= 1;
+            return temp_resist;
+        }
         return resistBonus;
     }
 }

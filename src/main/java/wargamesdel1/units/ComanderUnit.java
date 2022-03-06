@@ -9,8 +9,8 @@ package wargamesdel1.units;
  * @version 1.01 06.03.2022
  */
 public class ComanderUnit extends CavalryUnit{
-    static int attack = 25;
-    static int armor = 15;
+    private final static int attack = 25;
+    private final static int armor = 15;
 
     /**
      * constructor to assigne values when creation
