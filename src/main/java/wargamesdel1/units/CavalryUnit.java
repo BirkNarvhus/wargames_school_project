@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @see Unit
  *
  * @author birk
- * @version 1.01 22.02.2022
+ * @version 1.02 06.03.2022
  */
 public class CavalryUnit extends Unit{
 
@@ -32,6 +32,20 @@ public class CavalryUnit extends Unit{
      * @throws IllegalArgumentException if name is empty or health is less then or equals 0
      */
     public CavalryUnit(String name, int health) throws IllegalArgumentException {
+        super(name, health, attack, armor);
+    }
+
+    /**
+     * constructor to assigne values when creation
+     * this is protected and is only inteded to be used in child classes where the attack and defennce
+     * differ
+     * @param name type string
+     * @param health type string
+     * @param attack type int
+     * @param armor type int
+     * @throws IllegalArgumentException if name is empty or health is less then or equals 0
+     */
+    protected CavalryUnit(String name, int health, int attack, int armor) throws IllegalArgumentException {
         super(name, health, attack, armor);
     }
 
