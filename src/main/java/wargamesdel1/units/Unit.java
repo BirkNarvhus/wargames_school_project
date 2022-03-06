@@ -116,8 +116,7 @@ public abstract class Unit {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Unit)) return false;
-        Unit unit = (Unit) o;
+        if (!(o instanceof Unit unit)) return false;
         return getHealth() == unit.getHealth() && getAttack() == unit.getAttack() && getArmor() == unit.getArmor() && getName().equals(unit.getName()) && unit.getClass() == getClass();
     }
 
