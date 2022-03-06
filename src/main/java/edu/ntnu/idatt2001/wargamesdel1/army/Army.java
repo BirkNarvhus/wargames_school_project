@@ -120,7 +120,7 @@ public class Army {
      */
     public Unit getRandomUnit(){
         try {
-            return units.get((int) (Math.random() * (units.size() - 1)));
+            return units.get((int) (Math.random() * (units.size() -1)));
         }catch (IndexOutOfBoundsException e){
             return null;
         }

@@ -31,16 +31,16 @@ public class Client {
     private Army createArmy(Army army, int numInf, int numCav, int numRange, int numCom){
 
         for (int i = 0; i < numInf; i++) {
-            army.addUnit(new InfantryUnit(nameInf, hpInf));
+            army.addUnit(new InfantryUnit(nameInf + i, hpInf));
         }
         for (int i = 0; i < numCav; i++) {
-            army.addUnit(new CavalryUnit(nameCav, hpCav));
+            army.addUnit(new CavalryUnit(nameCav + i, hpCav));
         }
         for (int i = 0; i < numRange; i++) {
-            army.addUnit(new RangedUnit(nameRanged, hpRanged));
+            army.addUnit(new RangedUnit(nameRanged + i, hpRanged));
         }
         for (int i = 0; i < numCom; i++) {
-            army.addUnit(new ComanderUnit(nameCom, hpCom));
+            army.addUnit(new ComanderUnit(nameCom + i, hpCom));
         }
 
         return army;
@@ -53,7 +53,7 @@ public class Client {
      */
     public Battle createBattle(){
         createArmy(army1, 500, 100, 200, 1);
-        createArmy(army2, 500, 100, 200, 1);
+        createArmy(army2, 300, 100, 200, 1);
         return new Battle(army1, army2);
     }
 }

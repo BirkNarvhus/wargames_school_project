@@ -119,12 +119,13 @@ public abstract class Unit {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Unit unit)) return false;
-        return getHealth() == unit.getHealth() && getAttack() == unit.getAttack() && getArmor() == unit.getArmor() && getName().equals(unit.getName()) && unit.getClass() == getClass();
+        return getHealth() == unit.getHealth() && getAttack() == unit.getAttack() && getArmor() == unit.getArmor() &&
+                getName().equals(unit.getName()) && unit.getClass() == getClass();
     }
 
     /**
      * overide to ensure equals and hashcode gives same otucome
-     * @return hascode
+     * @return hashcode
      */
     @Override
     public int hashCode() {

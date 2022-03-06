@@ -1,0 +1,9 @@
+edu\ntnu\idatt2001\wargamesdel1\units\ComanderUnit.class
+edu\ntnu\idatt2001\wargamesdel1\units\RangedUnit.class
+edu\ntnu\idatt2001\wargamesdel1\units\CavalryUnit.class
+edu\ntnu\idatt2001\wargamesdel1\units\InfantryUnit.class
+edu\ntnu\idatt2001\wargamesdel1\army\Army.class
+edu\ntnu\idatt2001\wargamesdel1\units\Unit.class
+edu\ntnu\idatt2001\wargamesdel1\sim\Simulate.class
+edu\ntnu\idatt2001\wargamesdel1\sim\Battle.class
+edu\ntnu\idatt2001\wargamesdel1\sim\Client.class
